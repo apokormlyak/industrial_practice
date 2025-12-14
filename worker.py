@@ -3,7 +3,11 @@ class Worker:
         self.fio = fio
         self.salary = salary
         self.job_name = job_name
-        self.employment_year = employment_year
+        self._employment_year = employment_year
 
     def __str__(self):
         return f"Сотрудник {self.fio}\nУровень зп {self.salary}\nЗанимает должность {self.job_name}\nРаботает в компании с {self.employment_year} года\n"
+
+    @property
+    def employment_year(self):
+        return self._employment_year
